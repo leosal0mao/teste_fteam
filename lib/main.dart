@@ -1,20 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'package:teste_fteam/app.dart';
+import 'package:teste_fteam/data/datasources/character_remote_datasource.dart';
+import 'package:teste_fteam/data/repositories/character_repository_impl.dart';
+import 'package:teste_fteam/domain/usecases/get_characters.dart';
 
 void main() {
-  runApp(const MainApp());
-}
+  final client = http.Client();
+  final remoteDataSource = CharacterRemoteDataSourceImpl(client: client);
+  final repository = CharacterRepositoryImpl(
+    remoteDataSource: remoteDataSource,
+  );
+  final getCharactersUseCase = GetCharacters(repository);
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
-    );
-  }
+  runApp(App(getCharactersUseCase: getCharactersUseCase));
 }
