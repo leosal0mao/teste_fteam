@@ -85,8 +85,8 @@ Siga os passos abaixo para executar o projeto localmente.
 
 ### Pré-requisitos
 
-- `[...COMPLETAR: Especifique a versão do Flutter, ex: Flutter 3.19.x ou superior...]`
-- `[...COMPLETAR: Especifique o IDE, ex: Android Studio ou VS Code...]`
+- `Projeto feito utilizando a versão 3.32.8 do flutter`
+- `Alguma IDE de sua escolha, como o VSCode ou Android Studio`
 
 ### Passos
 
