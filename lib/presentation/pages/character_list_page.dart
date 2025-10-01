@@ -1,4 +1,4 @@
-import 'dart:async'; // Importe para usar o Timer (debounce)
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:teste_fteam/presentation/widgets/custom_list_tile.dart';
